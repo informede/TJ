@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Login Tany Servidores</title>
+  <title>Login OPS</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -49,7 +49,7 @@
     .section.active {
       display: block;
     }
-    /* Estilos para subsecciones dentro de Álgebra */
+    /* Estilos para subsecciones dentro de Preguntas frecuentes */
     .subsection {
       display: none;
       margin-top: 10px;
@@ -57,7 +57,7 @@
     .subsection.active {
       display: block;
     }
-    /* Para que los botones dentro de Álgebra puedan ir a la siguiente línea si hace falta */
+    /* Para que los botones dentro de Preguntas frecuentes puedan ir a la siguiente línea si hace falta */
     #intro .nav {
       flex-wrap: wrap;
     }
@@ -66,7 +66,7 @@
 <body>
 
 <div class="login-container" id="login-box">
-  <h2>Bienvenido a TanyStudy </h2>
+  <h2>Bienvenido a OPS </h2>
   <input type="text" id="username" placeholder="Usuario">
   <input type="password" id="password" placeholder="Contraseña">
   <button onclick="login()">Entrar</button>
@@ -74,27 +74,29 @@
 </div>
 
 <div class="content hidden" id="content-box">
-  <h2>Tany Study</h2>
+  <h2>OPS</h2>
   <div class="nav">
-    <button onclick="mostrarSeccion('intro')">Algebra</button>
-    <button onclick="mostrarSeccion('desarrollo')">Geometria</button>
-    <button onclick="mostrarSeccion('final')">Aritmetica</button>
-    <button onclick="mostrarSeccion('cierre')">Razonamiento Matematico</button>
+    <button onclick="mostrarSeccion('intro')">PREGUNTAS FRECUENTES</button>
+    <button onclick="mostrarSeccion('desarrollo')">REUNIONES DE ENTRE SEMANA</button>
+    <button onclick="mostrarSeccion('final')">REUNIONES DE FIN DE SEMANA</button>
+    <button onclick="mostrarSeccion('cierre')">INFORME DE PREDICACIÓN</button>
+    <button onclick="mostrarSeccion('encuentro')">PREDICACIÓN POR TERRITORIOS</button>
+
   </div>
 
   <!-- Secciones -->
   <div id="intro" class="section active">
-    <h3>Álgebra</h3>
+    <h3>PREGUNTAS FRECUENTES</h3>
 
     <div class="nav" style="flex-wrap: wrap;">
-      <button onclick="mostrarSubtema('algebra-inicio')">EXPRESIONES ALGEBRAICAS</button>
-      <button onclick="mostrarSubtema('expresiones')">TERMINOS SEMEJANTES</button>
-      <button onclick="mostrarSubtema('ecuaciones')">ECUACIONES BASICAS</button>
-      <button onclick="mostrarSubtema('desigualdades')">SISTEMA DE ECUACIONES ELEMENTALES</button>
-      <button onclick="mostrarSubtema('funciones')">TEORIA DE EXPONENTES</button>
-      <button onclick="mostrarSubtema('polinomios')">LEYES DE LA RADICACIÓN</button>
-      <button onclick="mostrarSubtema('factorizacion')">ECUACIONES EXPONENCIALES</button>
-      <button onclick="mostrarSubtema('sistemas')">NOTACIÓN POLINOMICA VALOR NÚMERICO</button>
+      <button onclick="mostrarSubtema('algebra-inicio')">LIBRO DISFRUTE DE LA VIDA</button>
+      <button onclick="mostrarSubtema('expresiones')">TRINIDAD?EXISTE? MORMONES,EVANGELICOS......</button>
+      <button onclick="mostrarSubtema('ecuaciones')">PORQUE LOS TESTIGOS DE JEHOVA NO CELEBRAMOS CUMPLEAÑOS</button>
+      <button onclick="mostrarSubtema('desigualdades')">ADÁN Y EVA EXISTEN? O SOLO UN MITO?</button>
+      <button onclick="mostrarSubtema('funciones')">EXISTEN LOS EXTRATERRESTRES Y FANTASMAS?</button>
+      <button onclick="mostrarSubtema('polinomios')">LA CIENCIA Y LA BIBLIA </button>
+      <button onclick="mostrarSubtema('factorizacion')">EVOLUCIÓN</button>
+      <button onclick="mostrarSubtema('sistemas')">TODOS SOMOS HIJOS DE DIOS?</button>
       <button onclick="mostrarSubtema('complejos')">GRADOS</button>
       <button onclick="mostrarSubtema('polinomios')">POLINOMIOS ESPECIALES</button>
       <button onclick="mostrarSubtema('grados')">GRADOS Y POLINOMIOS</button>
