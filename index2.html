@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Tany Servidores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container, .content {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 500px;
+    }
+    input, button {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .nav {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .nav button {
+      flex: 1;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    /* Estilos para subsecciones dentro de Álgebra */
+    .subsection {
+      display: none;
+      margin-top: 10px;
+    }
+    .subsection.active {
+      display: block;
+    }
+    /* Para que los botones dentro de Álgebra puedan ir a la siguiente línea si hace falta */
+    #intro .nav {
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container" id="login-box">
+  <h2>Bienvenido a TanyStudy </h2>
+  <input type="text" id="username" placeholder="Usuario">
+  <input type="password" id="password" placeholder="Contraseña">
+  <button onclick="login()">Entrar</button>
+  <p id="error" style="color: red;"></p>
+</div>
+
+<div class="content hidden" id="content-box">
+  <h2>Tany Study</h2>
+  <div class="nav">
+    <button onclick="mostrarSeccion('intro')">Algebra</button>
+    <button onclick="mostrarSeccion('desarrollo')">Geometria</button>
+    <button onclick="mostrarSeccion('final')">Aritmetica</button>
+    <button onclick="mostrarSeccion('cierre')">Razonamiento Matematico</button>
+  </div>
+
+  <!-- Secciones -->
+  <div id="intro" class="section active">
+    <h3>Álgebra</h3>
+
+    <div class="nav" style="flex-wrap: wrap;">
+      <button onclick="mostrarSubtema('algebra-inicio')">EXPRESIONES ALGEBRAICAS</button>
+      <button onclick="mostrarSubtema('expresiones')">TERMINOS SEMEJANTES</button>
+      <button onclick="mostrarSubtema('ecuaciones')">ECUACIONES BASICAS</button>
+      <button onclick="mostrarSubtema('desigualdades')">SISTEMA DE ECUACIONES ELEMENTALES</button>
+      <button onclick="mostrarSubtema('funciones')">TEORIA DE EXPONENTES</button>
+      <button onclick="mostrarSubtema('polinomios')">LEYES DE LA RADICACIÓN</button>
+      <button onclick="mostrarSubtema('factorizacion')">ECUACIONES EXPONENCIALES</button>
+      <button onclick="mostrarSubtema('sistemas')">NOTACIÓN POLINOMICA VALOR NÚMERICO</button>
+      <button onclick="mostrarSubtema('complejos')">GRADOS</button>
+      <button onclick="mostrarSubtema('polinomios')">POLINOMIOS ESPECIALES</button>
+      <button onclick="mostrarSubtema('grados')">GRADOS Y POLINOMIOS</button>
+      <button onclick="mostrarSubtema('operaciones')">OPERACIONES CON POLINOMIOS</button>
+      <button onclick="mostrarSubtema('multiplicación')">MULTIPLICACIÓN ALGEBRAICA</button>
+      <button onclick="mostrarSubtema('productos')">PRODUCTOS NOTABLES</button>
+      <button onclick="mostrarSubtema('metodo')">METODO HORNER PARA DIVIDIR POLINOMIOS</button>
+      <button onclick="mostrarSubtema('division')">DIVISION DE POLINOMIOS</button>
+      <button onclick="mostrarSubtema('cocientes')">COCIENTES NOTABLES</button>
+      <button onclick="mostrarSubtema('factorización')">FACTORIZACIÓN</button>
+      <button onclick="mostrarSubtema('mcd y mcm')">MCD Y MCM</button>
+      <button onclick="mostrarSubtema('fracciones')">FRACCIONES ALGEBRAICAS</button>
+      <button onclick="mostrarSubtema('radicales')">RADICALES DOBLES</button>
+      <button onclick="mostrarSubtema('racionalizar')">RACIONALIZACION</button>
+      <button onclick="mostrarSubtema('factorial')">FACTORIAL DE UN NÚMERO</button>
+      <button onclick="mostrarSubtema('combinatorio')">NÚMERO COMBINATORIO</button>
+      <button onclick="mostrarSubtema('binomio')">BINOMIO DE NEWTON</button>
+      <button onclick="mostrarSubtema('unidad')">UNIDAD IMAGINARIA</button>
+      <button onclick="mostrarSubtema('ecuaciones')">ECUACIONES DE PRIMER GRADO </button>
+      <button onclick="mostrarSubtema('segundo')">ECUACIONES DE SEGUNDO GRADO</button>
+      <button onclick="mostrarSubtema('fracciones')">ECUACIONES CON FRACCIONES</button>
+      <button onclick="mostrarSubtema('radicales')">ECUACIONES CON RADICALES</button>
+      <button onclick="mostrarSubtema('planteo')">PLANTEO DE ECUACIONES</button>
+
+
+
+
+
+</div>
+
+    <!-- Subsecciones de Álgebra -->
+    <div id="algebra-inicio" class="subsection active">
+      <h4>EXPRESIONES ALGEBRAICAS</h4>
+      <p>Álgebra es una rama fundamental de las matemáticas que usa símbolos para generalizar operaciones. Aquí se estudian conceptos clave que te ayudarán a resolver problemas de forma lógica.</p>
+    </div>
+
+    <div id="expresiones" class="subsection">
+      <h4>TERMINOS SEMEJANTES</h4>
+      
+      <p>Las expresiones algebraicas combinan números, letras (variables) y operaciones. Ejemplo: \( 3x + 5 \)</p>
+    </div>
+
+    <div id="ecuaciones" class="subsection">
+      <h4>ECUACIONES BASICAS</h4>
+      <p>Una ecuación es una igualdad entre dos expresiones. Ejemplo: \( x + 2 = 5 \)</p>
+    </div>
+
+    <div id="desigualdades" class="subsection">
+      <h4>SISTEMA DE ECUACIONES ELEMENTALES</h4>
+      <p>Relaciones donde las expresiones no son iguales. Ejemplo: \( x > 3 \)</p>
+    </div>
+
+    <div id="funciones" class="subsection">
+      <h4>TEORIA DE EXPONENTES</h4>
+      <p>Una función asocia un valor de entrada con un único valor de salida. Ejemplo: \( f(x) = x^2 \)</p>
+    </div>
+
+    <div id="polinomios" class="subsection">
+      <h4>LEYES DE LA RADICACIÓN</h4>
+      <p>Son expresiones algebraicas compuestas por sumas y restas de términos. Ejemplo: \( x^2 + 3x - 4 \)</p>
+    </div>
+
+    <div id="factorizacion" class="subsection">
+      <h4>ECUACIONES EXPONENCIALES</h4>
+      <p>Proceso para expresar un polinomio como producto de factores. Ejemplo: \( x^2 - 4 = (x - 2)(x + 2) \)</p>
+    </div>
+
+    <div id="sistemas" class="subsection">
+      <h4>NOTACIÓN POLINOMICA VALOR NÚMERICO</h4>
+      <p>Conjunto de ecuaciones que deben cumplirse simultáneamente. Ejemplo:  
+        \( x + y = 3 \),  
+        \( x - y = 1 \)
+      </p>
+    </div>
+
+    <div id="complejos" class="subsection">
+      <h4>GRADOS</h4>
+      <p>Incluyen una parte real y una imaginaria. Ejemplo: \( 2 + 3i \)</p>
+    </div>
+  </div>
+
+  <div id="desarrollo" class="section">
+    <h3>Geometría</h3>
+    <p>Esta sección contiene el contenido principal del proyecto o presentación.</p>
+    <ul>
+      <li>Análisis de situación</li>
+      <li>Desarrollo de ideas</li>
+      <li>Resultados preliminares</li>
+    </ul>
+  </div>
+
+  <div id="final" class="section">
+    <h3>Aritmética</h3>
+    <p>Aquí se presentan las conclusiones o resultados finales del trabajo.</p>
+    <img src="https://via.placeholder.com/300x150" alt="Gráfico final">
+  </div>
+
+  <div id="cierre" class="section">
+    <h3>Razonamiento Matemático</h3>
+    <p>Gracias por participar. En esta sección se hace un resumen y se plantean próximos pasos.</p>
+    <a href="https://www.ejemplo.com" target="_blank">Ir al sitio principal</a>
+  </div>
+
+  <br>
+  <button onclick="logout()">Ciérrame</button>
+</div>
+
+<script>
+  function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    if (user === "Sergio" && pass === "12345") {
+      document.getElementById("login-box").classList.add("hidden");
+      document.getElementById("content-box").classList.remove("hidden");
+      error.textContent = "";
+    } else {
+      error.textContent = "Usuario o contraseña incorrectos.";
+    }
+  }
+
+  function logout() {
+    document.getElementById("login-box").classList.remove("hidden");
+    document.getElementById("content-box").classList.add("hidden");
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+  }
+
+  function mostrarSeccion(id) {
+    const secciones = document.querySelectorAll(".section");
+    secciones.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+
+  function mostrarSubtema(id) {
+    const subtemas = document.querySelectorAll("#intro .subsection");
+    subtemas.forEach(sub => sub.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+</script>
+
+</body>
+</html>
+
